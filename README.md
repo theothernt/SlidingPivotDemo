@@ -1,4 +1,4 @@
-wp-sliding-pivot
-================
+Sliding Pivot Demo
+==================
 
-A pivot that can slide smoothly out of the way to reveal additional content (eg. a map)
+A pivot that can slide smoothly out of the way to reveal additional content behind (eg. a map)
