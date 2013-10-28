@@ -5,6 +5,7 @@
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:map="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps"  
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" 
@@ -14,12 +15,13 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
-
-    <!--LayoutRoot is the root grid where all page content is placed-->
+    
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <!--Pivot Control-->
-        <controls:Pivot Title="MY APPLICATION">
-            <!--Pivot item one-->
+
+        <map:Map x:Name="TopMap" LogoVisibility="Collapsed" CopyrightVisibility="Collapsed" Center="53.27825,-6.185646" ZoomLevel="13" />
+
+        <controls:Pivot Title="SLIDING PIVOT" DoubleTap="PivotItem_DoubleTap" x:Name="MainPivot" Height="628" VerticalAlignment="Bottom" Background="{StaticResource PhoneBackgroundBrush}">
+
             <controls:PivotItem Header="first">
                 <!--Double line list with text wrapping-->
                 <ListBox x:Name="FirstListBox" Margin="0,0,-12,0" ItemsSource="{Binding Items}">
